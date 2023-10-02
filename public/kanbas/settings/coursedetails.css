@@ -1,4 +1,4 @@
-/* General styles */
+
 * {
     box-sizing: border-box;
 }
@@ -19,14 +19,14 @@ ul {
     text-align: center;  
 }
 
-/* General anchor styles */
+
 a {
     text-decoration: none;
     display: flex;  
     align-items: center;  
-    justify-content: center;  /* Center alignment of items */
-    padding: 5px;  /* Adjusted to be 5 pixels */
-    margin: 5px;   /* Adjusted to be 5 pixels */
+    justify-content: center; 
+    padding: 5px; 
+    margin: 5px;  
     flex-wrap: wrap;  
 }
 
@@ -34,7 +34,7 @@ a {
 .container-fluid {
     display: grid;
     grid-template-columns: minmax(80px, auto) 1fr 3fr 1fr;
-    grid-template-rows: auto 1fr; /* Adding this ensures the breadcrumb navigation doesn't stretch to take up excess height */
+    grid-template-rows: auto 1fr;
     grid-template-areas: 
         "col1 nav nav nav"
         "col1 col2 col3 col4";
@@ -92,18 +92,18 @@ i {
 }
 
 .column-2 a {
-    color: red;  /* Text color for the 2nd column set to red */
+    color: red; 
 }
 
-/* Selected state for text and icon in the first column */
+
 .column-1 a.selected {
     color: red;  
 }
 
 .column-1 a.selected i {
     background-color: white;
-    padding: 5px;  /* Adjust as needed */
-    border-radius: 50%;  /* If you want the icon background to be rounded */
+    padding: 5px; 
+    border-radius: 50%; 
 }
 
 
@@ -175,10 +175,10 @@ i {
 
 
 .grid-column a {
-    color: #007BFF; /* Change to your preferred link color */
-    text-decoration: underline; /* You can remove this if you don't want them underlined */
-    font-size: inherit; /* Ensures the link font size matches surrounding text */
-    display: inline; /* Ensures the link doesn't act like a block-level element */
+    color: #007BFF;
+    text-decoration: underline;
+    font-size: inherit;
+    display: inline;
 }
 
 .profile-section {
@@ -197,19 +197,19 @@ i {
     align-items: center;
 }
 
-/* This targets links within the second column specifically */
+
 .column-2 a.column-2-link {
     color: red;
     text-align: left;
-    padding-left: 15px; /* Added padding on the left to move the text away from the edge */
+    padding-left: 15px;
 }
 
 .grid-column h2 {
-    margin-top: 30px; /* Adjust this value to your liking */
+    margin-top: 30px;
 }
 
 
-/* Define the styles for an active list item */
+
 .column li.active > a {
     background-color: white;
 }
@@ -222,108 +222,108 @@ i {
     color: red;
 }
 
-/* Add this to your styles to adjust the arrow's appearance */
+
 .arrow-between-inputs {
-    color: black;  /* set arrow color */
-    margin-bottom: 5px;  /* push it up a bit to position it correctly */
+    color: black; 
+    margin-bottom: 5px; 
 }
 
 
-/* Override the default red color for the pencil icon inside the "Cancel Editing" button */
+
 .btn-light i.fas.fa-pencil-alt {
     color: black;
 }
 
-/* Make sure the button text and icon are on the same line */
+
 .btn-light {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Add some spacing between the icon and the text */
+
 .btn-light i.fas.fa-pencil-alt {
-    margin-right: 8px; /* Adjust as per your requirement */
+    margin-right: 8px;
 }
 
 .cancel-editing-link {
-    text-decoration: none;  /* Removes the underline */
-    display: inline-flex;   /* Helps align the icon with the text */
-    align-items: center;    /* Vertical alignment of items in the flex container */
-    justify-content: center; /* Centers items horizontally in the flex container */
-    color: black;           /* Text and icon color */
-    background-color: white; /* Background color from .btn-light */
-    border: 1px solid #ccc; /* Example border, adjust as needed */
-    padding: 8px 12px;      /* Example padding, adjust as needed */
-    border-radius: 4px;     /* Example border radius, adjust as needed */
+    text-decoration: none; 
+    display: inline-flex;  
+    align-items: center;   
+    justify-content: center;
+    color: black;          
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 8px 12px;     
+    border-radius: 4px;    
 }
 
 a.btn.btn-light {
-    color: #212529; /* this is nearly black */
-    text-decoration: none; /* To remove the default underline */
+    color: #212529;
+    text-decoration: none;
 }
 
 
 .margin-top-spacing {
-    margin-top: 30px;  /* Adjust this value as needed */
+    margin-top: 30px; 
 }
 
 
 
 #select-one-pronoun {
-    margin-bottom: 5px; /* Decreased the margin at the bottom */
+    margin-bottom: 5px;
 }
 
 
 
 .button-group {
-    display: flex; /* To align items horizontally */
+    display: flex;
     gap: 10px;
 }
 
 label[for="title"] {
-    margin-bottom: 5px; /* Adjust this value as per your needs */
+    margin-bottom: 5px;
 }
 
-/* Profile header styling */
+
 .profile-header {
     display: flex;
     align-items: center;
-    margin-bottom: 10px; /* spacing below the icon and button */
+    margin-bottom: 10px;
 }
 
 .profile-header i {
     color: lightgrey;
-    margin-right: 300px; /* spacing between the icon and the button */
+    margin-right: 300px;
 }
 
 .edit-profile-btn {
-    padding: 5px 10px; /* adjust button padding */
+    padding: 5px 10px;
 }
 
-/* Assuming you have a Bootstrap CDN added in your project */
+
 .course-card {
-    width: 260px; /* Setting the width as per requirement, can be between 250 and 270px */
-    margin: 35px 15px; /* 35px top and bottom, 15px left and right, adjust as needed */
+    width: 260px;
+    margin: 35px 15px;
 }
 
-/* If you want a solid color instead of an image */
+
 .card-img-top {
-    background-color: #f5f5f5; /* Sample color */
-    height: 150px; /* Adjust as needed */
+    background-color: #f5f5f5;
+    height: 150px;
 }
 
-/* This ensures cards don't stretch or shrink */
+
 .card {
     width: 100%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: added a light shadow for aesthetic purposes */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
     display: flex;
     content: ">";
-    color: #6c757d;  /* This is Bootstrap's default breadcrumb separator color */
-    padding: 0 0.5rem;  /* Giving it some space on left and right */
+    color: #6c757d; 
+    padding: 0 0.5rem; 
 }
 
 .breadcrumb-item {
@@ -332,58 +332,58 @@ label[for="title"] {
 }
 
 .breadcrumb {
-    text-align: left; /* Align the breadcrumb to the left */
+    text-align: left;
 }
 .breadcrumb-item a {
-    justify-content: flex-start; /* Left-align content inside breadcrumb links */
+    justify-content: flex-start;
 }
 
 
 nav[aria-label="breadcrumb"] {
-    grid-column: 2 / 4;  /* Span from the first to the last column */
+    grid-column: 2 / 4; 
 }
 
 .red-highlight {
-    color: red !important; /* Using !important to ensure this color is applied even if there are other conflicting styles */
+    color: red !important;
 }
 
-/* Override icons inside the button to be black */
+
 .btn i {
     color: black !important;
 }
 
-/* ... [your existing styles] ... */
 
-/* For viewports less than 1000px wide */
+
+
 @media (max-width: 1000px) {
     .container-fluid {
-        grid-template-columns: minmax(80px, auto) 1fr 2fr; /* Removing the last 2fr */
+        grid-template-columns: minmax(80px, auto) 1fr 2fr;
         grid-template-areas: 
             "col1 nav nav"
             "col1 col2 col3";
     }
 
     .container-fluid > .column:nth-child(5) {
-        display: none; /* Hide the last column */
+        display: none;
     }
 }
 
 
 @media (max-width: 700px) {
     .container-fluid {
-        grid-template-columns: 1fr; /* Only one column */
-        grid-template-areas: "col3"; /* Only col3 */
+        grid-template-columns: 1fr;
+        grid-template-areas: "col3";
     }
 
-    .container-fluid > .column:nth-child(1), /* First column which is black-colored */
-    .container-fluid > .column:nth-child(2), /* Your col1 */
-    .container-fluid > .column:nth-child(3), /* Your col2 */
-    .container-fluid > .column-group {       /* Your nav */
-        display: none; /* Hide all these columns and nav */
+    .container-fluid > .column:nth-child(1),
+    .container-fluid > .column:nth-child(2),
+    .container-fluid > .column:nth-child(3),
+    .container-fluid > .column-group {      
+        display: none;
     }
 
     .container-fluid > .column:nth-child(4) {
-        grid-area: col3; /* Position col3 */
+        grid-area: col3;
     }
 
     nav[aria-label="breadcrumb"] {
@@ -393,7 +393,7 @@ nav[aria-label="breadcrumb"] {
 
 
     #assignment-name {
-        max-width: 100%; /* Adjust this percentage as per your need */
+        max-width: 100%;
     }
 
     .btn-danger .fas.fa-plus {
@@ -407,7 +407,7 @@ nav[aria-label="breadcrumb"] {
     }
     
     th {
-        min-width: 150px; /* Adjust as necessary */
+        min-width: 150px;
     }
 
     .icon-black {
@@ -415,12 +415,12 @@ nav[aria-label="breadcrumb"] {
     }
 
 
-    /* Style all links in the div with red color */
+   
 .d-flex a {
     color: red;
 }
 
-/* Style the Course Details link with black color */
+
 .course-details-link {
     color: black !important;
 }
