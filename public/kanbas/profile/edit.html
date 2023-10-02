@@ -3,123 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../vendors/bootstrap/css/bootstrap.min.css">
+    <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../navigation.css">
     <title>Courses</title>
 </head>
+
 <body>
-    <table border="0" width="100%">
-        <tr>
-            <!-- First column -->
-            <td width="10%" valign="top">
-                <ul>
-                    <li><a href="profiledirect.html">Account</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="../courses.html">Courses</a></li> 
-                    <li><a href="#">Calender</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
-            </td>
-            <!-- Second column -->
-            <td width="20%" valign="top">
-                <ul>
-                    <li><a href="#">Notifications</a></li>
-                    <li><a href="index.html">Profile</a></li>
-                    <li><a href="#">Files</a></li> 
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">ePorfolios</a></li>
-                    <li><a href="#">Shared Content</a></li>
-                    <li><a href="#">The Hub</a></li>
-                    <li><a href="#">Qwickly Course Tools</a></li>
-                    <li><a href="#">Global Announcements</a></li>
+    <div class="container-fluid">
+        <!-- First column -->
+<div class="column">
+    <ul>
+        <li class="logo-item"><img src="../NU_CMYK_Notched-N_wordmark_RW.png" alt="Logo" class="sidebar-logo"></li>
+        <li class="active">
+            <a href="profile/profiledirect.html">
+                <div class="icon-text">
+                    <i class="fas fa-user"></i>
+                    <span>Account</span>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="../dashboard.html">
+                <div class="icon-text">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="courses.html">
+                <div class="icon-text">
+                    <i class="fas fa-book"></i>
+                    <span>Courses</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="icon-text">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Calendar</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="icon-text">
+                    <i class="fas fa-inbox"></i>
+                    <span>Inbox</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="icon-text">
+                    <i class="fas fa-history"></i>
+                    <span>History</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="icon-text">
+                    <i class="fas fa-music"></i>
+                    <span>Studio</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="icon-text">
+                    <i class="fas fa-users"></i>
+                    <span>Commons</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="icon-text">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+        <!-- Second column -->
+        <div class="column column-2">
+            <ul>
+                <li><a class="column-2-link" href="#">Notifications</a></li>
+                <li><a class="column-2-link profile-link" href="index.html">Profile</a></li>
+                <li><a class="column-2-link" href="#">Files</a></li> 
+                <li><a class="column-2-link" href="#">Settings</a></li>
+                <li><a class="column-2-link" href="#">ePorfolios</a></li>
+                <li><a class="column-2-link" href="#">Shared Content</a></li>
+                <li><a class="column-2-link" href="#">The Hub</a></li>
+                <li><a class="column-2-link" href="#">Qwickly Course Tools</a></li>
+                <li><a class="column-2-link" href="#">Global Announcements</a></li>
+            </ul>
+        </div>
+
+
+        <!-- Third column -->
+        <div class="grid-column">
+            <h2>Jinpeng Chen</h2>
+            <hr>
+
+
+
+            <div class="profile-header d-flex align-items-center">
+                <i class="fa fa-user fa-8x" aria-hidden="true"></i>
             
-                </ul>
-            </td>
-            <!-- Third column -->
-                 <td width="60%" valign="top">
+                <!-- Float the buttons to the right using 'float-end' class -->
+                <div class="ms-auto"> 
+                    <a href="index.html" class="btn btn-light float-end">
+                        <i class="fas fa-pencil-alt"></i>Cancel Editing
+                    </a>
+                </div>
+            </div>
 
-                <h2>Jinpeng Chen</h2>
 
-                <label for="text-fields-name">Name:</label> 
-                <input type="text" id="text-fields-name"
-                    placeholder="Doe" value="Jinpeng Chen"/>
-                    
-                    <label for="select-one-Pronoun">
-                        Pronouns: 
-                    </label>
-                    <select id="select-one-pronoun">
-                        <option value="None">None</option> 
-                    </select>
-                    <br/>
-                    <br/>
+            <div class="profile-section">
+                <h1 class="profile-name">Jinpeng Chen</h1>
                 
-                    <label for="text-fields-title">Title:</label> 
-                <input type="text" id="text-fields-title"/> 
 
-                    <h2>Contact</h2>
-                    No registered services, you can add some on the <a href="#">settings</a> page.
+            </div>
 
-                    <h2>Contact</h2>
-                    No registered services, you can add some on the <a href="#">settings</a> page.
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" class="form-control" placeholder="Enter Name">
+            </div>
 
-                    <h2>Biography</h2>
-                    Graduate Student, Software Engineer<br/>
-                    <form id="textarea">
-                        <textarea cols="50" rows="5">Graduate Student, Software Engineer.</textarea>
-                    </form>
+            <label for="select-one-pronoun">Pronouns:</label>
+            <select id="select-one-pronoun" class="form-select">
+                <option selected>Open this select menu</option>
+                <option value="None" selected>None</option>
+                <!-- Add more options here if needed -->
+            </select>
 
 
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" class="form-control" placeholder="Enter Title">
+            </div>
 
-                    <h2>Links</h2>
-                    <a href="#">Youtube</a>
-                    <br/>
-                    <br/>
+            <h2>Contact</h2>
+            <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
 
-                    <table>
-                        <tr>
-                            <td colspan="2">
-                                <h2>Title</h2>
-                            </td>
-                            <td colspan="2">
-                                <h2>URL</h2>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" id="titleInput" value="YouTube" readonly>
-                            </td>
-                            <td>
-                                <span>&rarr;</span> <!-- Right arrow -->
-                            </td>
-                            <td>
-                                <input type="text" id="urlInput" value="www.youtube.com">
-                            </td>
-                            <td>
-                                <a href="#">Remove</a>
-                            </td>
-                        </tr>
-                    </table>
-                    <br/>
-                
-                    <button type="button">Add another link</button><br/>
-                    <button type="button">Cancel</button>
-                    <button onclick="location.href='index.html'">Save Profile</button><br/>
-                    <button type="button">Edit Profile</button>
-                    <button onclick="location.href='index.html'">Cancel Editing</button>
-                    <br/>
-                        
 
-                    
+            <div class="form-group">
+                <label for="biography">Biography:</label>
+                <textarea id="biography" class="form-control" style="display: block;">Graduate Student, Software Engineer.</textarea>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <label for="linkTitle">Title:</label>
+                    <input type="text" id="linkTitle" class="form-control" placeholder="Youtube">
+                </div>
+            
+                <!-- Column to hold the arrow icon -->
+                <div class="col-auto align-self-end"> <!-- align-self-end to place the arrow at the bottom of the column -->
+                    <i class="fas fa-arrow-right arrow-between-inputs"></i>
+                </div>
+            
+                <div class="col">
+                    <label for="linkURL">URL:</label>
+                    <input type="text" id="linkURL" class="form-control" placeholder="https://youtu.be/_Hq9n7cc8rk?si=zLUDuQoqN6vW6CQZ">
+                </div>
+            </div>
+            
+            <br/>
+            <!-- Updated "Cancel" button -->
+            
+            <div class="button-group">
+                <button onclick="location.href='index.html'" class="btn btn-light btn-spacing">Cancel</button>
+                <button onclick="location.href='index.html'" class="btn btn-danger">Save Profile</button>
+            </div>
+            
 
-                   
-                </td>
-            <!-- Fourth column -->
-            <td width="10%" valign="top">
-                
-            </td>
-        </tr>
-    </table>
+        </div>
+
+        <!-- Fourth column -->
+        <div class="column">
+            <!-- Empty as per the newer version -->
+        </div>
+    </div>
 </body>
 </html>
