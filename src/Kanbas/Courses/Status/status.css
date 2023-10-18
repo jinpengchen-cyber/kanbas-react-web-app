@@ -1,0 +1,77 @@
+.status-list-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.action-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.action-item {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+    display: flex; /* Added this line */
+    align-items: center; /* Added this line */
+}
+
+.to-do-list {
+    margin-top: 30px;
+}
+
+.to-do-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    padding: 15px 20px; /* Increased padding */
+    background-color: #f9f9f9;
+    border: none;
+    border-radius: 10px; /* Increased the border radius */
+}
+
+
+.task-points {
+    background-color: #e74c3c; /* Adjusted the red color for better contrast */
+    color: white;
+    border-radius: 50%;
+    width: 45px; /* Adjusted the size for better visibility */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 15px; /* Added some margin to separate it from the task name */
+}
+
+.task-name {
+    flex-grow: 1;
+    margin: 0 10px;
+    font-weight: 500; /* Making the task name slightly bold */
+}
+
+.task-deadline {
+    font-size: 0.9em;
+    color: #888;
+    margin-left: 10px; /* Added some margin to separate it from the task name */
+}
+
+.action-item i.fa {
+    margin-right: 10px;
+}
+
+
+.action-item button {
+    display: flex; /* Added this line */
+    align-items: center; /* Added this line */
+    width: 100%; /* Added this line */
+    border: none; /* Added this line */
+    background: none; /* Added this line */
+    cursor: pointer; /* Added this line */
+    font-family: inherit; /* Added this line */
+    font-size: inherit; /* Added this line */
+}

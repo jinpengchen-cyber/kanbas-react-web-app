@@ -1,0 +1,38 @@
+.wd-course-navigation {
+  background-color: white;
+  list-style: none;
+  padding-top: 20px;
+  width: 160px;
+  margin: 0px;
+  margin-left: 0px;
+  border-radius: 0px;
+  border: none;
+}
+.wd-course-navigation a {
+  display: block;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  border: none;
+  text-align: left;
+  color: red;
+  text-decoration: none;
+  font-weight: normal;
+}
+.wd-course-navigation a.active {
+  border-left: 2px solid black;
+  background-color: white;
+  color: black;
+  font-weight: bold; /* Making the text bold when active */
+  padding-left: 8px;
+}
+.wd-course-navigation a.active {
+  color: black;
+}
+
+.wd-course-navigation a {
+  color: red;
+  text-decoration: none;
+}

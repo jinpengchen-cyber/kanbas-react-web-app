@@ -1,0 +1,43 @@
+.border-bottom {
+    border-bottom: 3px solid #ccc; /* Adjust color as desired */
+    padding-bottom: 10px; /* Add padding to give space between the border and the buttons */
+  margin-bottom: 30px;
+
+}
+  
+
+.modules-header {
+    display: flex;
+    gap: 10px; /* Adjust as per your requirements */
+  }
+  
+  button {
+    border: 1px solid #ccc; /* Base border for all buttons */
+    padding: 10px 20px; /* Adjust for size */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Hand cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+  }
+  
+
+  .button-red {
+    border-color: red;
+    background-color: red; /* Light red background */
+    color: white;
+  }
+  
+  .button-grey {
+    border-color: #ccc;
+    background-color: #f6f6f6; /* Light grey background */
+    color: #333;
+  }
+  
+  .more-actions {
+    border-color: #ccc;
+    background-color: transparent;
+    font-size: 24px;
+    width: 40px; /* Adjust based on your design */
+    height: 40px; /* Adjust based on your design */
+  }
+  

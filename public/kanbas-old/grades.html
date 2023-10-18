@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
+    <link href="../vendors/fontawesome/css/all.css" rel="stylesheet" />
+    <script src="../vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    
+    <link rel="stylesheet" href="grades.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment_index</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item" style="display: inline;">CS5610.17367 Web Development</li>
+                <li class="breadcrumb-item" style="display: inline;">Grades</li>
+            </ol>
+        </nav>
+        
+        
+        
+<!-- First column -->
+<div class="column">
+    <ul>
+        <li class="logo-item"><img src="NU_CMYK_Notched-N_wordmark_RW.png" alt="Logo" class="sidebar-logo"></li>
+        <li>
+            <a href="profile/profiledirect.html">
+                <div class="icon-text">
+                    <i class="fas fa-user"></i>
+                    <span>Account</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="dashboard.html">
+                <div class="icon-text">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </div>
+            </a>
+        </li>
+
+        <li class="active">
+            <a href="courses.html">
+                <div class="icon-text">
+                    <i class="fas fa-book"></i>
+                    <span>Courses</span>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <div class="icon-text">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Calendar</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="icon-text">
+                    <i class="fas fa-inbox"></i>
+                    <span>Inbox</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="icon-text">
+                    <i class="fas fa-history"></i>
+                    <span>History</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="icon-text">
+                    <i class="fas fa-music"></i>
+                    <span>Studio</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="icon-text">
+                    <i class="fas fa-users"></i>
+                    <span>Commons</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="icon-text">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+
+        <!-- Second column -->
+        <div class="column column-2">
+            <ul>
+                
+                <li><a class="column-2-link" href="home.html">Home</a></li>
+                <li><a class="column-2-link" href="#">Modules</a></li>
+                <li><a class="column-2-link" href="#">Piazza</a></li>
+                <li><a class="column-2-link" href="#">Zoom Meetings</a></li>
+                <li><a class="column-2-link" href="assignments/index.html">Assignments</a></li>
+                <li><a class="column-2-link" href="#">Quizzes</a></li>
+                <li><a class="column-2-link profile-link" href="grades.html">Grades</a></li>
+                <li><a class="column-2-link" href="#">People</a></li>
+                <li><a class="column-2-link" href="#">Panopto Video</a></li>
+                <li><a class="column-2-link" href="#">Discussions</a></li>
+                <li><a class="column-2-link" href="#">Announcements</a></li>
+                <li><a class="column-2-link" href="#">Pages</a></li>
+                <li><a class="column-2-link" href="#">Files</a></li>
+                <li><a class="column-2-link" href="#">Rubrics</a></li>
+                <li><a class="column-2-link" href="#">Outcomes</a></li>
+                <li><a class="column-2-link" href="#">Collaborations</a></li>
+                <li><a class="column-2-link" href="#">Syllabus</a></li>
+                <li><a class="column-2-link" href="settings/coursedetails.html">Settings</a></li>
+            </ul>
+        </div>
+
+ <!-- Third column -->
+ <div class="column">
+
+    <div style="float: right;"> 
+
+
+        <button type="button" class="btn btn-secondary">
+            <i class="fas fa-file-import icon-black"></i> Import
+        </button>
+        
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-upload icon-black"></i> Export
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Export as PDF</a></li>
+                <li><a class="dropdown-item" href="#">Export as Excel</a></li>
+                <li><a class="dropdown-item" href="#">Export as CSV</a></li>
+
+            </ul>
+        </div>
+
+    
+
+        <button type="button" class="btn btn-secondary">
+            <i class="fas fa-cogs icon-black"></i> Configure
+        </button>
+    </div>
+    
+
+    <div style="clear: both;"></div>
+    
+    <div class="row mt-2">
+        <div class="col-md-6">
+            <label for="student-name" class="bold-text">Student Names</label>
+            <input type="text" class="form-control" placeholder="Search Students" id="student-name">
+        </div>
+        <div class="col-md-6">
+            <label for="assignment-name" class="bold-text">Assignment Names</label>
+            <input type="text" class="form-control" placeholder="Search for Assignments" id="assignment-name">
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <button type="button" class="btn btn-secondary" style="float: left;">
+                <i class="fas fa-filter icon-black"></i> Apply Filters
+            </button>
+        </div>
+    </div>
+
+    
+    
+
+    <div class="table-responsive mt-2">
+        <table class="table table-striped">
+
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>A1 SETUP<br> Out of 100</th>
+                    <th>A2 HTML<br> Out of 100</th>
+                    <th>A3 CSS<br> Out of 100</th>
+                    <th>A4 BOOSTRAP<br> Out of 100</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+                <tr>
+                    <td>Alice Wonderland</td>
+                    <td>98</td>
+                    <td>98</td>
+                    <td>87</td>
+                    <td><input type="text" placeholder="Enter score" class="form-control"></td>
+                </tr>
+
+                <tr>
+                    <td>Princes Leia</td>
+                    <td>98</td>
+                    <td>98</td>
+                    <td>90</td>
+                    <td>100</td>
+                </tr>
+
+                <tr>
+                    <td>Luke Skywalker</td>
+                    <td><input type="text" placeholder="Enter score" class="form-control"></td>
+                    <td>100</td>
+                    <td>90</td>
+                    <td>93</td>
+                </tr>
+ 
+                <tr>
+                    <td>HanSolo</td>
+                    <td>83</td>
+                    <td><input type="text" placeholder="Enter score" class="form-control"></td>
+                    <td>90</td>
+                    <td>99</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+        <!-- Fourth column -->
+<!-- Fourth column -->
+
+
+
+</body>
+
+</html>

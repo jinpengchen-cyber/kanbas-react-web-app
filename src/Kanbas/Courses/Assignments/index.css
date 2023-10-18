@@ -1,0 +1,53 @@
+.search-input {
+    margin-right: 100px;
+}
+
+.assign {
+    margin-right: 10px;
+}
+
+.list-group-header {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #f5f5f5;  /* light gray background for distinction */
+}
+
+.hw {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: none;
+}
+
+.list-group-item.hw {
+    height: 70px; 
+}
+
+.list-group-item.hw a {
+    color: black;         
+    text-decoration: none; 
+}
+
+.search-container {
+    display: flex;
+    
+    align-items: center;  
+}
+
+.search-input {
+    flex-grow: 1;  /* Allow the input to take up remaining space */
+}
+
+.assign {
+    margin-left: auto;  /* Push all subsequent items (the buttons) to the far right */
+    margin-right: 10px; /* This can be kept or adjusted as needed */
+}
+
+
+
+
