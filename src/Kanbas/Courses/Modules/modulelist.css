@@ -1,0 +1,78 @@
+.module-container {
+    margin-bottom: 20px;
+    margin-right: 100px;
+}
+
+.actions {
+    margin-bottom: 20px;
+}
+
+.module-table, .module-table td {
+    border: 1px solid #d0d0d0 !important; /* Slightly darker gray border */
+}
+
+.module-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;}
+
+.module-table td {
+    padding: 5px;
+}
+
+
+.module-table h3, 
+.module-table h4 {
+    margin: 0;
+}
+
+.module-table p {
+    margin: 0.5em 0;
+}
+
+/* modulelist.css */
+
+.textarea-description {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Allows users to resize the textarea vertically */
+    font-family: inherit; /* Makes the font consistent with the rest of the page */
+    font-size: 16px;
+    margin-top: 10px; /* Adds some space on top for separation */
+    transition: border-color 0.3s ease; /* Smoothens the transition effect */
+}
+
+.textarea-description:focus {
+    border-color: #007BFF; /* Changes the border color on focus */
+    outline: none;
+}
+
+/* modulelist.css */
+
+.input-name {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit; /* Makes the font consistent with the rest of the page */
+    font-size: 16px;
+    margin-top: 10px; /* Adds some space on top for separation */
+    transition: border-color 0.3s ease; /* Smoothens the transition effect */
+}
+
+.input-name:focus {
+    border-color: #007BFF; /* Changes the border color on focus */
+    outline: none;
+}
+
+.triangle-indicator {
+    font-size: 0.6em;
+    margin-left: 20px;
+}
+
+
+
+
+  

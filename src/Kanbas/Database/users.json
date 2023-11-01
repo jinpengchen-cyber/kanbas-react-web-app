@@ -20,6 +20,26 @@
       "role": "STUDENT"
     },
     {
+      "_id": "122",
+      "username": "dark_knight",
+      "password": "wayne123",
+      "firstName": "Bruce",
+      "lastName": "Wayne",
+      "email": "bruce@wayne.com",
+      "dob": "1972-02-19",
+      "role": "STUDENT"
+    },
+    {
+      "_id": "122",
+      "username": "dark_knight",
+      "password": "wayne123",
+      "firstName": "Bruce",
+      "lastName": "Wayne",
+      "email": "bruce@wayne.com",
+      "dob": "1972-02-19",
+      "role": "STUDENT"
+    },
+    {
       "_id": "123",
       "username": "capt_america",
       "password": "rogers123",
