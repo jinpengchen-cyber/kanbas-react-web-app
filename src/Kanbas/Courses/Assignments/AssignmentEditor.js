@@ -1,52 +1,51 @@
-
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-
-import { Link, useNavigate, useParams } from "react-router-dom";
-import db from "../../Database";
-import {addAssignment, updateAssignment} from "./assignmentsReducer";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams, Link } from "react-router-dom";
+import * as client from "./client";
 
 function AssignmentEditor() {
   const { assignmentId, courseId } = useParams();
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const assignment = useSelector((state) => 
-      state.assignments.assignments.find((assignment) => assignment._id === assignmentId)) || {};
+  
+  const [assignment, setAssignment] = useState({});
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [dueDate, setDueDate] = useState("");
+  const [availableFromDate, setAvailableFromDate] = useState("");
+  const [availableUntilDate, setAvailableUntilDate] = useState("");
 
-  const [title, setTitle] = useState(assignment.title || "");
-  const [description, setDescription] = useState(assignment.description || "");
-  const [dueDate, setDueDate] = useState(assignment.dueDate || "");
-  const [availableFromDate, setAvailableFromDate] = useState(assignment.availableFromDate || "");
-  const [availableUntilDate, setAvailableUntilDate] = useState(assignment.availableUntilDate || "");
-
-
-    const handleSave = () => {
-      if (title.trim() === "") {
-        alert("Title cannot be empty.");
-        return;
+  useEffect(() => {
+    if (assignmentId) {
+      client.findAssignmentById(assignmentId).then((fetchedAssignment) => {
+        setAssignment(fetchedAssignment);
+        setTitle(fetchedAssignment.title);
+        setDescription(fetchedAssignment.description);
+        setDueDate(fetchedAssignment.dueDate);
+        setAvailableFromDate(fetchedAssignment.availableFromDate);
+        setAvailableUntilDate(fetchedAssignment.availableUntilDate);
+      });
     }
-      const newAssignment = {
-        _id: assignmentId || new Date().getTime().toString(),
-        title,
-        description,
-        dueDate,
-        availableFromDate,
-        availableUntilDate,
-        course: courseId
-    };
-    
-  
-      if (assignmentId) {
+  }, [assignmentId]);
 
-          dispatch(updateAssignment(newAssignment)); 
-      } else {
-        console.log("Dispatching new assignment:", newAssignment);
-          dispatch(addAssignment(newAssignment));
-      }
-  
-      navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+  const handleSave = () => {
+    const assignmentData = {
+      title,
+      description,
+      dueDate,
+      availableFromDate,
+      availableUntilDate,
+      course: courseId
+    };
+
+    if (assignmentId) {
+      client.updateAssignment({ ...assignmentData, _id: assignmentId })
+        .then(() => navigate(`/Kanbas/Courses/${courseId}/Assignments`))
+        .catch(error => console.error('Error updating assignment:', error));
+    } else {
+      client.createAssignment(courseId, assignmentData)
+        .then(() => navigate(`/Kanbas/Courses/${courseId}/Assignments`))
+        .catch(error => console.error('Error creating assignment:', error));
+    }
   };
-  
     return (
         <div>
             <label>Assignment Name</label>
@@ -65,7 +64,8 @@ function AssignmentEditor() {
             <input type="date" value={availableUntilDate} onChange={(e) => setAvailableUntilDate(e.target.value)} className="form-control mb-2" />
 
             <Link to={`/Kanbas/Courses/${courseId}/Assignments`} className="btn btn-light">Cancel</Link>
-            <button onClick={handleSave} className="btn btn-danger">Save</button>
+            <button onClick={handleSave} className="btn btn-success">Save</button> 
+
         </div>
     );
 }

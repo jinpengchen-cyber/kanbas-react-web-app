@@ -1,4 +1,6 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "./courses.css";
 import { useParams, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import db from "../Database";
@@ -9,11 +11,29 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 
-function Courses({ courses }) {
+function Courses() {
   const { courseId } = useParams();
   const {pathname} = useLocation();
   const [screen] = pathname.split("/");
-  const course = courses.find((course) => course._id === courseId);
+  // const course = courses.find((course) => course._id === courseId);
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(`http://localhost:4000/api/courses/${courseId}`);
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
+// const findCourseById = async (courseId) => {
+//   const response = await axios.get(`${URL}/${courseId}`);
+//   setCourse(response.data);
+// };
+
+// useEffect(() => {
+//   findCourseById(courseId);
+// }, [courseId]);
+
   return (
     <div>
       

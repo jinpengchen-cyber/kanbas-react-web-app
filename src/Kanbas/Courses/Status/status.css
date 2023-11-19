@@ -10,14 +10,27 @@
 }
 
 .action-item {
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #f1f1f1;
-    border: 1px solid #f1f1f1;
-    border-radius: 4px;
-    display: flex; /* Added this line */
-    align-items: center; /* Added this line */
+    text-align: left;
+    margin: 5px auto;
+    display: block;
+    background: #f5f5f5;
+    color: #2d3b45;
+    border: 1px solid;
+    border-color: #c7cdd1;
+    border-radius: 3px;
+    transition: background-color .2s ease-in-out;
+    position: relative;
+    padding: 8px 14px;
+    font-size: 1rem;
+    line-height: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    overflow: hidden;
+    text-shadow: none;
+    user-select: none;
 }
+
+
 
 .to-do-list {
     margin-top: 30px;

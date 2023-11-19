@@ -4,8 +4,8 @@ import assignmentsReducer from "../Courses/Assignments/assignmentsReducer";
 
 const store = configureStore({
   reducer: {
-    modulesReducer,
-    assignments: assignmentsReducer
+    modules: modulesReducer,
+    assignments: assignmentsReducer,
   }
 });
 export default store;

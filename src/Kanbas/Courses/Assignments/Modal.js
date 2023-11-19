@@ -11,7 +11,7 @@ function Modal({ isOpen, title, content, onCancel, onConfirm }) {
                 <p>{content}</p>
                 <div className="modal-actions">
                     <button onClick={onCancel} className="btn btn-light">Cancel</button>
-                    <button onClick={onConfirm} className="btn btn-danger">Yes</button>
+                    <button onClick={onConfirm} className="btn btn-danger">Delete</button>
                 </div>
             </div>
         </div>

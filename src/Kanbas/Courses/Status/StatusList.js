@@ -19,15 +19,15 @@ function StatusList() {
 
   return (
     <div className="status-list-container">
-<ul className="action-list">
+    <ul className="action-list">
     {actions.map((action, index) => (
-      <li key={index} className="action-item">
-        <button>
-          <> {/* Use a fragment */}
+      <li key={index} className="action-item button">
+
+          <> 
             <i className={`fa ${action.icon}`} aria-hidden="true"></i>
             {action.name}
           </>
-        </button>
+
       </li>
     ))}
 </ul>

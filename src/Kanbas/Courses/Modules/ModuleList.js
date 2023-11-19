@@ -1,66 +1,106 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import db from "../../Database";
-import { useSelector, useDispatch } from "react-redux";
+// import db from "../../Database";
+import { useDispatch } from "react-redux";
 import "./modulelist.css";
 import {
   addModule,
   deleteModule,
   updateModule,
-  setModule,
 } from "./modulesReducer";
+
+import { findModulesForCourse, createModule } from "./client";
+import * as client from "./client";
+
 
 function ModuleList() {
   const { courseId } = useParams();
-  const modules = useSelector((state) => state.modulesReducer.modules);
-  const module = useSelector((state) => state.modulesReducer.module);
+  const [modules, setModules] = useState([]);
+  const [module, setModule] = useState({});
+  // const [editingModule, setEditingModule] = useState({ name: '', description: '' });
+
+  useEffect(() => {
+    findModulesForCourse(courseId).then((modules) => setModules(modules));
+  }, [courseId]);
+
   const dispatch = useDispatch();
   const [expandedModuleId, setExpandedModuleId] = useState(null);
+
+  const handleAddModule = () => {
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+      setModules([module, ...modules])
+      setModule({ name: "New Module", description: "New Description" });
+    });
+  }
+
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+      setModules(modules.filter((module) => module._id !== moduleId));
+    }
+    )
+  }
+
+  const handleUpdateModule = () => {
+    client.updateModule(module).then((status) => {
+      dispatch(updateModule(module));
+      setModules(modules.map((m) => (m._id === module._id ? module : m)));
+      setModule({ name: "New Module", description: "New Description" });
+    });
+  }
+
+  const handleEditModule = (module) => {
+    setModule(module);
+  }
+
+
 
   return (
     <div className="module-container">
       <div className="actions">
-        <button onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+        <button onClick={handleAddModule}>
           Add
         </button>
-        <button onClick={() => dispatch(updateModule(module))}>
+
+        <input
+          value={module.name}
+          onChange={(e) => setModule({ ...module, name: e.target.value })}
+          className="form-control"
+          placeholder="Module Name"
+        />
+
+        <button onClick={() => handleUpdateModule(module)}>
           Update
         </button>
-        <input
-        className="input-name"
-          value={module.name}
-          onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
-        />
-        <textarea
-        className="textarea-description"
-          value={module.description}
-          onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
-        />
+
+
       </div>
-      
+
       {modules
         .filter((moduleItem) => moduleItem.course === courseId)
         .map((moduleItem) => (
           <table key={moduleItem._id} className="module-table">
             <tbody>
               <tr>
-                <td onClick={() => 
+                <td onClick={() =>
                   setExpandedModuleId(
                     expandedModuleId === moduleItem._id ? null : moduleItem._id
                   )
                 }>
-                  
+
                   <h3>
-                    {moduleItem.name} 
+                    {moduleItem.name}
                     <span className="triangle-indicator">
-        {expandedModuleId === moduleItem._id ? "▼" : "►"}
-    </span>
+                      {expandedModuleId === moduleItem._id ? "▼" : "►"}
+                    </span>
                   </h3>
                   <p>{moduleItem.description}</p>
-                  <button onClick={() => dispatch(setModule(moduleItem))}>
+                  <button onClick={() => handleEditModule(moduleItem)}>
                     Edit
                   </button>
-                  <button onClick={() => dispatch(deleteModule(moduleItem._id))}>
+
+                  <button onClick={() => handleDeleteModule(moduleItem._id)}>
                     Delete
                   </button>
                 </td>
