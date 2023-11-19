@@ -1,9 +1,9 @@
 import axios from "axios";
 // const COURSES_URL = "https://kanbas-node-server-app-gov7.onrender.com/api/courses";
 // const ASSIGNMENTS_URL = "https://kanbas-node-server-app-gov7.onrender.com/api/assignments";
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
-const COURSES_URL = `${API_BASE_URL}/courses`;
-const ASSIGNMENTS_URL = `${API_BASE_URL}/assignments`;
+const API_BASE = process.env.REACT_APP_API_BASE;
+const COURSES_URL = `${API_BASE}/courses`;
+const ASSIGNMENTS_URL = `${API_BASE}/assignments`;
 // create new assignment at the front
 export const createAssignment = async (courseId, assignmentData) => {
     const response = await fetch(`${COURSES_URL}/${courseId}/assignments`, {
