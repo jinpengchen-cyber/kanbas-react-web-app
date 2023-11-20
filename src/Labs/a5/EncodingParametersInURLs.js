@@ -10,7 +10,7 @@ function EncodingParametersInURLs() {
   };
   
   const fetchSubtraction = async (a, b) => {
-    const response = await axios.get(`http://localhost:4000/a5/subtract/${a}/${b}`);
+    const response = await axios.get(`https://kanbas-node-server-app-gov7.onrender.com/a5/subtract/${a}/${b}`);
     setResult(response.data);
   };
 
