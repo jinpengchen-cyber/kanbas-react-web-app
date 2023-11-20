@@ -5,7 +5,7 @@ function EncodingParametersInURLs() {
   const [result, setResult] = useState(0);
   
   const fetchSum = async (a, b) => {
-    const response = await axios.get(`http://localhost:4000/a5/add/${a}/${b}`);
+    const response = await axios.get(`https://kanbas-node-server-app-gov7.onrender.com/a5/add/${a}/${b}`);
     setResult(response.data);
   };
   
