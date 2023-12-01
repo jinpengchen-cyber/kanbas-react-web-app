@@ -11,7 +11,7 @@ function WorkingWithObjects() {
     score: 0,
   });
 
-  const URL = "https://kanbas-node-server-app-gov7.onrender.com/a5/assignment";
+  const URL = "http://localhost:4000/a5/assignment";
   const fetchAssignment = async () => {
     const response = await axios.get(`${URL}`);
     setAssignment(response.data);
@@ -64,13 +64,13 @@ function WorkingWithObjects() {
 
 
       <h4>Retrieving Objects</h4>
-      <a href="https://kanbas-node-server-app-gov7.onrender.com/a5/assignment"
+      <a href="http://localhost:4000/a5/assignment"
         className="btn btn-primary me-2">
         Get Assignment
       </a>
       <h4>Retrieving Properties</h4>
       <a
-        href="https://kanbas-node-server-app-gov7.onrender.com/a5/assignment/title"
+        href="http://localhost:4000/a5/assignment/title"
         className="btn btn-primary me-2"
         style={{ marginBottom: 20 }}>
         Get Title
@@ -81,7 +81,7 @@ function WorkingWithObjects() {
       <div></div>
       {/* get score */}
       <a
-        href= "https://kanbas-node-server-app-gov7.onrender.com/a5/assignment/score"
+        href= "http://localhost:4000/a5/assignment/score"
         className="btn btn-primary me-2"
         style={{ marginBottom: 20 }}>
         Get Score
@@ -101,7 +101,7 @@ function WorkingWithObjects() {
       <div></div>
       {/* get completed */}
       <a
-        href= "https://kanbas-node-server-app-gov7.onrender.com/a5/assignment/completed"
+        href= "http://localhost:4000/a5/assignment/completed"
         className="btn btn-primary me-2">
         Get Completed
       </a>

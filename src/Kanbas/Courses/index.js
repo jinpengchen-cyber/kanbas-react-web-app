@@ -18,7 +18,7 @@ function Courses() {
   // const course = courses.find((course) => course._id === courseId);
   const [course, setCourse] = useState({});
   const findCourseById = async (courseId) => {
-    const response = await axios.get(`https://kanbas-node-server-app-gov7.onrender.com/api/courses/${courseId}`);
+    const response = await axios.get(`http://localhost:4000/api/courses/${courseId}`);
     setCourse(response.data);
   };
   useEffect(() => {
