@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-export const BASE_API = process.env.REACT_APP_BASE_API || "http://localhost:4000";
+// export const BASE_API = process.env.REACT_APP_BASE_API || "http://localhost:4000";
+export const BASE_API = process.env.REACT_APP_BASE_API || "https://kanbas-node-server-app-gov7.onrender.com"
 export const USERS_API = `${BASE_API}/api/users`;
 const request = axios.create({
   withCredentials: true,
